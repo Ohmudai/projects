@@ -1,0 +1,157 @@
+# projects
+#java file code
+package com.example.vigenere;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class MainActivity extends AppCompatActivity {
+    private EditText plaintextEditText;
+    private EditText keyEditText;
+    private TextView resultTextView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        plaintextEditText = findViewById(R.id.plaintext_edit_text);
+        keyEditText = findViewById(R.id.key_edit_text);
+        resultTextView = findViewById(R.id.result_text_view);
+
+        Button encryptButton = findViewById(R.id.encrypt_button);
+        encryptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String plaintext = plaintextEditText.getText().toString();
+                String key = keyEditText.getText().toString();
+                String ciphertext = VigenereCipher.encrypt(plaintext, key);
+                resultTextView.setText(ciphertext);
+            }
+        });
+
+        Button decryptButton = findViewById(R.id.decrypt_button);
+        decryptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ciphertext = plaintextEditText.getText().toString();
+                String key = keyEditText.getText().toString();
+                String plaintext = VigenereCipher.decrypt(ciphertext, key);
+                resultTextView.setText(plaintext);
+            }
+        });
+    }
+}
+
+package com.example.vigenere;
+
+import android.app.AlertDialog;
+import android.app.Application;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.res.Configuration;
+import android.util.Log;
+import android.widget.Toast;
+
+import java.util.Locale;
+public class VigenereCipher {
+    private static final int ALPHABET_SIZE = 26;
+
+    public static String encrypt(String plaintext, String key) {
+        plaintext = plaintext.toUpperCase();
+        key = key.toUpperCase();
+        StringBuilder ciphertext = new StringBuilder();
+        int keyIndex = 0;
+
+        for (int i = 0; i < plaintext.length(); i++) {
+            char currentChar = plaintext.charAt(i);
+            if (Character.isLetter(currentChar)) {
+                int plainCharValue = currentChar - 'A';
+                int keyCharValue = key.charAt(keyIndex) - 'A';
+                int encryptedCharValue = (plainCharValue + keyCharValue) % ALPHABET_SIZE;
+                char encryptedChar = (char) (encryptedCharValue + 'A');
+                ciphertext.append(encryptedChar);
+                keyIndex = (keyIndex + 1) % key.length();
+            } else {
+                ciphertext.append(currentChar);
+            }
+        }
+
+        return ciphertext.toString();
+    }
+
+#xml file code
+
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/plaintext_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plaintext:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/plaintext_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/plaintext_label"
+        android:hint="Enter plaintext"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/key_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plaintext_edit_text"
+        android:layout_marginTop="16dp"
+        android:text="Key:"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/key_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/key_label"
+        android:hint="Enter encryption key"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/encrypt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/key_edit_text"
+        android:layout_marginTop="16dp"
+        android:text="Encrypt" />
+
+    <Button
+        android:id="@+id/decrypt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/encrypt_button"
+        android:layout_marginTop="8dp"
+        android:text="Decrypt" />
+
+    <TextView
+        android:id="@+id/result_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/decrypt_button"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp" />
+
+</RelativeLayout>
