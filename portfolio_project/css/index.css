@@ -1,0 +1,159 @@
+body{
+  background-image: url(../images/bg_for_home.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#main_container{
+  padding:20px;
+}
+/* desining of navigation bar */
+
+
+#navigation_bar{
+  position: sticky;
+  border-bottom:2px solid black;
+  border-radius:10px;
+  margin-bottom:40px;
+  padding: 10px;
+  
+  top: 0px;
+
+}
+
+
+ nav #logo_container, nav ul{
+  display: inline-block;
+ } 
+
+ nav .link{
+  display: inline-block;
+  margin: 10px;
+  font-size: 20px;
+  line-height:70px;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px; 
+  transition: 0.3s all;
+  padding:0px 10px;
+  transition: 0.4s;
+ }
+ 
+
+ 
+ #nav_icon .link:hover{
+  border-bottom: 1px solid black;
+  background-color: black;
+  color:white;
+  
+  box-shadow: 10px 10px 10px rgb(93, 129, 141);
+  
+ }
+ nav #nav_icon{
+  float: right;
+ }
+
+ nav #logo_container img{
+  object-fit:contain;
+  width: 90px;
+  height: 90px;
+  mix-blend-mode: color-burn;
+ }
+ #logo_container{
+  padding: 0px;;
+}
+
+
+/* desining of content  */
+
+
+ #content{
+  margin-top: 30px;
+  text-align: center;
+ }
+ #content h2{
+  display: inline-block;
+  margin-right: 100px;
+ }
+ #content #image_container{
+  vertical-align: top;
+  display: inline-block;
+  margin-left: 40px;
+
+ }
+ #image_container img{
+  width:250px;
+  height: 250px;
+  border-radius:20px;
+  
+ }
+
+ #content div:first-child{
+  height: 301px;
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: left;
+ }
+
+
+
+
+
+#resume_link{
+  color:black;
+  text-decoration: none;
+
+}
+
+#resume_button{
+  
+  font-family: cursive;
+  font-weight: bold;
+  box-sizing: content-box;
+  border: 1px solid black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s ;
+  display: block;
+  margin-bottom: 30px;
+  
+  
+}
+
+#om_resume{
+  width: 134px;
+  height: 20px;
+  margin-bottom: 30px;
+
+}
+
+#resume_button:hover{
+  font-family: cursive;
+  box-shadow: 10px 10px 10px rgb(93, 129, 141);
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-style:italic;
+}
+
+
+
+#link{
+  width:35px;
+  height:35px;
+  border-radius: 10px;
+  margin:5px;
+  transition: 0.4s;
+  
+}
+#link:hover{
+  border: 2px solid lightblue;
+  width: 50px;
+  height: 50px;
+}
+

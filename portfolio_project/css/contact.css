@@ -1,0 +1,71 @@
+body{
+  background-image: url(../images/bg_for_home.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main_container{
+  border:1px solid black;
+  border-radius: 10px;
+}
+nav img{
+  width: 100px;
+  height: 100px;
+mix-blend-mode: color-burn;
+margin-bottom: 30px;
+
+}
+
+#content_container{
+  padding: 20px;
+}
+
+  
+  #link{
+    width:35px;
+    height:35px;
+    border-radius: 10px;
+    margin:5px;
+    object-fit:fill;
+    transition: 0.4s;
+    
+  }
+  #link:hover{
+    border: 2px solid lightblue;
+    width: 50px;
+    height: 50px;
+  }
+
+  nav,#contact_link{
+    display: inline-block;
+  }
+  #contact_link{
+    float: right;
+    line-height: 150px;
+  }
+  #outer_div{
+    text-align: center;
+  }
+  #inner_div input{
+    padding:3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width:900px;
+    height: 30px;
+    color: white;
+  }
+  #inner_div input:focus{
+    background-color:rgb(228, 228, 228);
+  }
+  #inner_div button{
+    border:2px solid black;
+    width:177px;
+    padding:10px;
+    border-radius: 10px;
+    background-color: rgb(222, 229, 231);
+    font-size: 18px;
+  }
+
+#inner_div label{
+  font-size: 28px;
+}
