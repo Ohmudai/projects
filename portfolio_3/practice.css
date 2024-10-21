@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Gilroy", sans-serif;
+      }
+      #main-container {
+        margin: 0px 20px;
+      }
+      .header-content {
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      #header {
+        margin: 10px 0px 0 0px;
+        border: 2px solid rgb(215, 91, 19);
+        border-radius: 10px;
+      }
+      .para {
+        margin: 10px 0;
+        color: blue;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* display property in css */
+
+      /* nav #logo{
+      display: inline-block;
+    }
+  nav ul{
+    display: inline-block;
+     
+  } */
+
+      nav {
+        background-color: rgb(230, 230, 245);
+        padding: 0px 20px;
+        border-radius: 10px;
+      }
+
+      /* grouping selector */
+      nav ul,
+      nav #logo,
+      nav ul li,
+      #auth-btn {
+        display: inline-block;
+      }
+
+      #auth-btn {
+        float: right;
+        line-height: 60px;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      nav ul li:hover {
+        border-bottom: 2px solid rgb(215, 91, 19);
+        /* text-decoration: underline; */
+        /* color: rgb(215, 91, 19);
+        transition: 10s;  */
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      nav ul {
+        list-style-type: none;
+        width: 70%;
+        text-align: center;
+      }
+
+      #auth-btn button {
+        padding: 5px 20px;
+        margin: 0 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      #auth-btn button:hover {
+        background-color: rgb(215, 91, 19);
+        color: white;
+      }
+    </style>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main-container">
+      <!-- Start Header -->
+      <div style="background-color: rgb(8, 8, 114)" id="header">
+        <h3 style="color: rgb(215, 91, 19)" class="header-content">
+          Ram's Portfolio
+        </h3>
+      </div>
+      <!-- End Header -->
+
+      <!-- start navigation bar -->
+      <nav>
+        <div id="logo">
+          <h3>Logo</h3>
+        </div>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div id="auth-btn">
+          <button>Register</button>
+          <button>Login</button>
+        </div>
+      </nav>
+      <!-- end navigation bar -->
+
+      <!-- start hero section -->
+      <div id="hero-section">
+        <div id="hero-content" style="height: 50px">
+          <h1 class="para">Welcome to my Portfolio</h1>
+          <p class="para">I am</p>
+        </div>
+
+        <div id="hero-img">
+          <img
+            src="https://www.zotezo.com/wp-content/uploads/2020/02/Chris-Evans-pinterest-768x768.jpg"
+            alt="man_image"
+          />
+        </div>
+      </div>
+
+      <!-- end hero section -->
+
+      <!-- start services section -->
+      <section id="services">
+        <h1>Services section</h1>
+        <div id="serve-container">
+          <div style="padding: 10px;" class="serve-content">
+            <h3>Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quos.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
