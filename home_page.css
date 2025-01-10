@@ -1,0 +1,916 @@
+body{
+  margin: 0px;
+  position:relative;
+ 
+}
+
+#up_arrow{
+
+  position: fixed;
+  
+  text-decoration: none;
+  bottom: 0px;
+  right: 0px;
+  
+}
+
+
+#background{
+  border-bottom:none;
+  background-image: url("./images/bg_image.jpg");
+  background-size:cover;
+  width: 100%;
+  height:1000px;
+   background-position-y:-180px ;
+   position: relative;
+  background-repeat: no-repeat;
+  opacity: 1;
+  
+ 
+  
+  
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+ font-family: 'Baloo Paaji 2';
+ font-weight:bolder;
+ position: sticky;
+ top: 0px;
+ 
+ column-gap: 480px;
+ 
+ z-index: 100;
+ 
+}
+
+#logo img{
+  mix-blend-mode: color-burn;
+  width: 130px;
+  height: 90px;
+}
+
+#nav_opt{
+  display: flex;
+  width: 400px;
+  column-gap: 18px;
+}
+#nav_opt>li{
+  list-style-type: none;
+  
+  
+}
+
+#nav_opt li>a{
+  text-decoration: none;
+  font-size: large;
+  font-weight: bolder;
+  color: white;
+
+}
+
+#nav_opt li>a:hover{
+  color:#695aa6
+}
+#dropdown_content{
+  list-style-type: none;
+  padding-left: 0px;
+}
+#dropdown_content>li{
+  display: none;
+  
+}
+
+
+/* ending of navigation bar */
+
+#content{
+  position: absolute;
+  left: 35%;
+  top: 20%;
+}
+#content h1{
+  font-family: 'Baloo Paaji 2';
+  font-size: 70px;
+  font-weight:700;
+  margin: 0px;
+  color: #212529;
+  line-height: 90px;
+}
+#content span{
+  font-size: 30px;
+  font-family: 'Open Sans';
+  font-weight: lighter;
+  letter-spacing: 8px;
+}
+#content a{
+  display: block;
+  margin-top:20px
+}
+#content a button{
+  padding: 8px 15px 8px;
+  border-radius: 20px;
+ background-color: #695aa6;
+ border-color: #6f42c1;
+ color: white;
+ font-size: large;
+ font-family: 'Open Sans';
+ font-size: lighter;
+ border:none;
+ border: 2px solid  #695aa6;
+ transition: 0.3s background-color;
+}
+#content a button:hover{
+  background-color: #654d91;
+  cursor:pointer;
+}
+/* end of background and content container */
+
+/* starting of about container */
+#about_container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  
+  padding-bottom: 70px;
+  
+  
+}
+#about_container img{
+  width:400px;
+  height: 400px;
+}
+#about #section_subtitle{
+  font-family: 'Open Sans';
+  color: #111;
+  letter-spacing:.6px;
+  font-weight: 400;
+  opacity: .6;
+  margin-bottom: 6px;
+}
+#about_container #section_title{
+  font-family: 'Baloo Paaji 2';
+  font-size:calc(20px + (35 - 20) * ((100vw - 300px) / (1300 - 300)));
+  margin-top: 0px;
+  font-weight: bolder ;
+  color: #695aa6;
+  margin-bottom: 16px;
+
+ 
+}
+
+#about_me_des{
+  width:510px;
+  text-align: justify;
+  font-size: calc(13px +(15 - 13)*((100vw - 300px) /(1300 - 300)));
+  font-weight: 100 ;
+  letter-spacing: .6px;
+  font-family:'Open Sans' ;
+  opacity: 1;
+  color: #111;
+  margin-bottom:1rem;
+  margin-top: 0px;
+}
+#about_container button{
+  margin-top: 24px;
+  padding:6px 12px 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #695aa6;
+  color: #695aa6;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  transition: 0.3s all;
+
+}
+#about_container button:hover{
+  background-color: #695aa6 ;
+  color:white;
+
+}
+
+/* ending of content container */
+
+/* startting of section container */
+
+section{
+ text-align: center;
+ padding-top: 70px;
+ padding-bottom: 70px;
+}
+section p{
+  font-family:'Open Sans' ;
+  font-size: 14px;
+  opacity:.6;
+  margin-bottom: 6px;
+  margin-top: 0px;
+
+}
+section h1{
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  font-weight:bolder ;
+  font-size: 32px;
+  margin-bottom: 64px;
+  margin-top: 0px;
+}
+#section_content{
+  display: flex;
+  justify-content: space-around;
+  padding:0px 80px 0px 80px;
+  margin-bottom: 20px
+  
+  
+}
+#section_content>div{
+  width:255px;
+  height: 230px;
+  border: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+#section_content div img{
+  width: 55px;
+  height:55px;
+  flex: 1;
+}
+#section_content div h3{
+  color: #695aa6;
+  font-family: 'Baloo Paaji 2';
+  flex:1;
+  margin: 0px;
+}
+#inner_content{
+  display: none;
+ flex: 1;
+}
+#inner_content p{
+  width: 15em;
+  
+}
+#div1:hover #inner_content{
+  display: flex;
+  
+
+}
+#div2:hover #inner_content{
+  display: flex;
+
+}
+#div3:hover #inner_content{
+  display: flex;
+
+}
+#div4:hover #inner_content{
+  display: flex;
+
+}
+#div1:hover,#div2:hover ,#div3:hover ,#div4:hover  {
+  cursor: pointer;
+}
+/* ending of section container */
+
+/* starting of project section */
+
+#project_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+#project_div1{
+  position: relative;
+  height: 249px;
+  width: 249px;
+  border: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+   
+}
+#project_div1::before{
+  content: "";
+  background-image: url(./images/developer.png) ;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: -1;
+  transition: all 0.5s;
+  
+  
+}
+#project_div1:hover,#project_div2:hover,#project_div3:hover,#project_div4:hover{
+  cursor: pointer;
+}
+
+
+
+
+#project_explanation1 , #project_explanation2,#project_explanation3,#project_explanation4{
+  text-align: justify;
+  padding: 20px;
+  font-size: calc(13px +(15 - 13)*((100vw - 300px) /(1300 - 300)));
+  color: black;
+  letter-spacing: .2px;
+  font-weight: bolder!important;
+  font-family: 'Open Sans';
+  display: none;
+  
+}
+#project_heading1, #project_heading2,#project_heading3,#project_heading4{
+  color: #695aa6;
+  font-family: 'Baloo Paaji 2';
+  font-weight: 500;
+  
+ line-height: 20px;
+  margin-bottom: 0px;
+  display: none;
+}
+
+#project_div1:hover::before{
+  filter: blur(10px);
+  opacity: 0.3;
+  
+}
+#project_div1:hover #project_heading1 , #project_div1:hover #project_explanation1{
+  display: contents;
+}
+#project_div2{
+  position: relative;
+  height: 249px;
+  width: 249px;
+  border: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+  
+   
+}
+
+#project_div2::before{
+  content: "";
+  background-image: url(./images/rock_paper_scissor.png) ;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: -2;
+  transition: all 0.5s;
+  
+  
+}
+#project_div2:hover::before{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+#project_div2:hover #project_heading2 , #project_div2:hover #project_explanation2{
+  display: contents;
+}
+#project_div3{
+  position: relative;
+  height: 249px;
+  width: 249px;
+  border: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+   
+}
+
+#project_div3::before{
+  content: "";
+  background-image: url(./images/machine_learning.png) ;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: -2;
+  transition: all 0.5s;
+  
+  
+}
+#project_div3:hover::before{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+#project_div3:hover #project_heading3 , #project_div3:hover #project_explanation3{
+  display: contents;
+}
+
+#project_div4{
+  position: relative;
+  height: 249px;
+  width: 249px;
+  border: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  
+   
+}
+
+#project_div4::before{
+  content: "";
+  background-image: url(./images/machine_learning.png) ;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: -2;
+  transition: all 0.5s;
+  
+  
+}
+#project_div4:hover::before{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+#project_div4:hover #project_heading4 , #project_div4:hover #project_explanation4{
+  display: contents;
+}
+/* ending of project section */
+
+/* starting of skills section */
+
+#skills_container{
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 30px;
+  align-items:center;
+}
+
+#skill1{
+  width:229px;
+  height:229px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  position: relative;
+}
+#skill1_bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(./images/c++.png);
+  background-size: cover;
+  transition:  all 0.5s;
+}
+#skill1:hover #skill1_bg{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+#skill1_heading{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  display: none;
+}
+#skill1:hover #skill1_heading{
+  display: block;
+  transition: 0.3s all;
+}
+#skill1_para{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #111;
+  display: none;
+}
+#skill1:hover #skill1_para{
+  display: contents;
+}
+
+#skill2{
+  width:229px;
+  height:229px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+#skill2_bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(./images/java.png);
+  background-size: cover;
+  transition:  all 0.5s;
+}
+#skill2:hover #skill2_bg{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+#skill2_heading{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  display: none;
+}
+#skill2:hover #skill2_heading{
+  display: block;
+  transition: 0.3s all;
+}
+#skill2_para{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #111;
+  display: none;
+}
+#skill2:hover #skill2_para{
+  display: contents;
+}
+
+
+#skill3{
+  width:229px;
+  height:229px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+#skill3_bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(./images/ml.jpeg);
+  background-size: cover;
+  transition:  all 0.5s;
+}
+#skill3:hover #skill3_bg{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+#skill3_heading{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  display: none;
+}
+#skill3:hover #skill3_heading{
+  display: block;
+  transition: 0.3s all;
+}
+#skill3_para{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #111;
+  display: none;
+}
+#skill3:hover #skill3_para{
+  display: contents;
+}
+
+
+#skill4{
+  width:229px;
+  height:229px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+#skill4_bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(./images/html\,css\,js\ logo.png);
+  background-size: cover;
+  transition:  all 0.5s;
+}
+#skill4:hover #skill4_bg{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+#skill4_heading{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  display: none;
+}
+#skill4:hover #skill4_heading{
+  display: block;
+  transition: 0.3s all;
+}
+#skill4_para{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #111;
+  display: none;
+}
+#skill4:hover #skill4_para{
+  display: contents;
+}
+
+#skill5{
+  width:229px;
+  height:229px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+#skill5_bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(./images/mern.png);
+  background-size: cover;
+  transition:  all 0.5s;
+}
+#skill5:hover #skill5_bg{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+#skill5_heading{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  display: none;
+}
+#skill5:hover #skill5_heading{
+  display: block;
+  transition: 0.3s all;
+}
+#skill5_para{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #111;
+  display: none;
+}
+#skill5:hover #skill5_para{
+  display: contents;
+}
+
+#skill6{
+  width:229px;
+  height:229px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+#skill6_bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(./images/github\ logo.png);
+  background-size: cover;
+  transition:  all 0.5s;
+}
+#skill6:hover #skill6_bg{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+#skill6_heading{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  display: none;
+}
+#skill6:hover #skill6_heading{
+  display: block;
+  transition: 0.3s all;
+}
+#skill6_para{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #111;
+  display: none;
+}
+#skill6:hover #skill6_para{
+  display: contents;
+}
+
+#skill7{
+  width:229px;
+  height:229px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+#skill7_bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(./images/dbms.png);
+  background-size: cover;
+  transition:  all 0.5s;
+}
+#skill7:hover #skill7_bg{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+#skill7_heading{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  display: none;
+}
+#skill7:hover #skill7_heading{
+  display: block;
+  transition: 0.3s all;
+}
+#skill7_para{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #111;
+  display: none;
+}
+#skill7:hover #skill7_para{
+  display: contents;
+}
+
+#skill8{
+  width:229px;
+  height:229px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+#skill8_bg{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background-image: url(./images/dsa.png);
+  
+  background-size: cover;
+  transition:  all 0.5s;
+}
+#skill8:hover #skill8_bg{
+  filter: blur(10px);
+  opacity: 0.3;
+}
+
+#skill8_heading{
+  font-weight: 500;
+  font-size: 25px;
+  font-family: 'Baloo Paaji 2';
+  color: #695aa6;
+  display: none;
+}
+#skill8:hover #skill8_heading{
+  display: block;
+  transition: 0.3s all;
+}
+#skill8_para{
+  font-family: 'Open Sans';
+  font-weight: 700;
+  color: #111;
+  display: none;
+}
+#skill8:hover #skill8_para{
+  display: contents;
+}
+
+/* starting of contact me section */
+
+input{
+  width:400px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  padding: 6px 12px;
+}
+textarea{
+  width: 400px;
+  height: 150px;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding:6px 12px;
+}
+input:focus{
+  border: none;
+  box-shadow: 5px 5px 5px #695aa6, -5px -5px 5px #695aa6;
+ 
+}
+textarea:focus{
+  border: none;
+  box-shadow: 5px 5px 5px #695aa6 ,-5px -5px 5px #695aa6;
+  
+}
+#send_msg{
+  padding:6px 12px;
+  width: 132px;
+  height: 38px;
+  border:1px solid #695aa6;
+  border-radius: 5px;
+  font-size: 13px ;
+  font-family: 'Open Sans';
+  color: #695aa6;
+  transition: 0.5s all;
+  
+}
+#send_msg:hover{
+  color: white;
+  background-color: #695aa6;
+  cursor: pointer;
+}
+#contact_icon{
+display: flex;
+align-items: center;
+justify-content: center;
+column-gap: 10px;
+margin: 100px 0px 30px 0px;
+}
+#contact_icon a{
+  text-decoration: none;
+}
+
+#facebook{
+ width: 60px;
+ height: 50px;
+ border-radius: 50%;
+}
+#insta{
+  width: 60px;
+  height: 50px;
+  border-radius:100px;
+}
+#git{
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+}
+#mail{
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+ 
+}
